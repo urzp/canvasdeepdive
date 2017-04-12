@@ -5,6 +5,25 @@
     <title>Images</title>
 </head>
 <body>
-    
+    <h1>Images</h1>
+    <p>Canvas can draw images with the drawImage function.<br>
+There are several forms of drawImage. You can draw the image directly to the screen at normal scale, or stretch and slice it how you like. Slicing and stretching images can be very handy for special effects in games because image interpolation is often much faster than other ways kinds of scaling.</p>
+<canvas width="1200" height="600" id="canvas"></canvas> 
+<script> 
+    var canvas = document.getElementById('canvas'); 
+    var ctx = canvas.getContext('2d'); 
+    var img = new Image();
+    img.src = 'web.png';
+
+    ctx.drawImage(img, 0,0); //normal drawing
+    ctx.drawImage(img, //draw stretched
+    0,0,66,66, //source (x,y,w,h)
+    100,0,100,100//destination (x,y,w,h)
+    );
+    ctx.drawImage(img, //draw a slice
+    20,10,20,20, //source coords (x,y,w,h)
+    250,0,250,50//destination coords (x,y,w,h)
+    );
+</script>
 </body>
 </html>

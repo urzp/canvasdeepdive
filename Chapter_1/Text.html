@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Text</title>
+</head>
+<body>
+    <h1>Text</h1>
+    <p>Canvas can draw text as well. The font attribute is the same as its CSS equivalent, so you can set the styleg, size, and font family. Note that the fillText(string,x,y) function draws using baseline of the text, not the top. If you put your text at 0,0 then it will be drawn off the top of the screen. Be sure to lower the y by an appropriate amount</p>
+    <canvas width="800" height="600" id="canvas"></canvas> 
+    <script> 
+    var canvas = document.getElementById('canvas'); 
+    var ctx = canvas.getContext('2d'); 
+    ctx.fillStyle = "blue";
+    ctx.font = "italic "+96+"pt Arial ";
+    ctx.fillText("this is text", 20,150);
+    </script> 
+</body>
+</html>
