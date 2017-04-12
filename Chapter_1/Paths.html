@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Paths</title>
+</head>
+<h1>Paths</h1>
+<p>Canvas only directly supports the rectangle shape. To draw any other shape you must draw it yourself using a path. Paths are shapes created by a bunch of straight or curved line segments. In Canvas you must first define a path with beginPath(), then you can fill it, stroke it, or use it as a clip. You define each line segment with functions like moveTo(), lineTo(), and bezierCurveTo(). This example draws a shape with a move to, followed by a bezier curve segment, then some lines. After creating the path it fills and strokes it.</p>
+<canvas width="250" height="300" id="canvas"></canvas>
+<script>
+    var canvas = document.getElementById('canvas');
+    var c =   canvas.getContext('2d');
+    c.fillStyle = 'red';
+    c.beginPath();
+    c.moveTo(10,30);
+    c.bezierCurveTo(50,90,159,-30,210,30);
+    c.lineTo(200,90);
+    c.lineTo(10,90);
+    c.closePath();
+    c.fill();
+    c.lineWidth = 4;
+    c.strokeStyle = '#9a141d';
+    c.stroke();  
+</script>
+<body>
+    
+</body>
+</html>
